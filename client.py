@@ -15,7 +15,6 @@ try:
     print("It connected")
 except sock.error as err:
     print("Could not connect to host due error:" + err)
-expect
 
 file = open(argv[3], "rb")
 accio = ""
