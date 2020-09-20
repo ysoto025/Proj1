@@ -26,6 +26,7 @@ while True:
     accio += rec
 
 if accio == 'accio':
+
     while True:
 
         send = file.read(1024)
