@@ -19,16 +19,14 @@ except sock.gaierror as err:
 file = open(argv[3], "rb")
 accio = ""
 
-rec = (self.sock.recv(5).decode("utf-8"))
+self.sock.recv(5).decode("utf-8")
 
-if accio == 'accio':
+while True:
 
-    while True:
-
-        send = file.read(2048)
-        if len(send) < 1:
-            break
-        sock.send(send)
+   send = file.read(2048)
+   if len(send) < 1:
+       break
+   sock.send(send)
 
 file.close()
 
