@@ -13,13 +13,14 @@ if len(argv) < 3:
 try:
     sock.connect((argv[1], int(argv[2])))
     print("It connected")
-except sock.error as err:
+except sock.gaierror as err:
     print("Could not connect to host due error:" + err)
 
 file = open(argv[3], "rb")
 accio = ""
 
 while True:
+
     rec = (self.sock.recv(1).decode("utf-8"))
     if len(rec) < 1:
         break
